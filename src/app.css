@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: forest --default;
+}
+
+html, body, #app {
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  overflow-y: auto;
+}
+
+.divider {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
