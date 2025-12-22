@@ -1,0 +1,20 @@
+{
+  "src/app.tsx": {
+    "file": "assets/app-kJ4QPmu3.js",
+    "name": "app",
+    "src": "src/app.tsx",
+    "isDynamicEntry": true,
+    "css": [
+      "assets/app-CiqG1pFM.css"
+    ]
+  },
+  "virtual:$vinxi/handler/server-fns": {
+    "file": "server-fns.js",
+    "name": "server-fns",
+    "src": "virtual:$vinxi/handler/server-fns",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/app.tsx"
+    ]
+  }
+}
