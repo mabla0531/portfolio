@@ -2,7 +2,7 @@ export default function Skills() {
   return (
     <div class="flex w-full h-full justify-center items-center gap-2 p-4">
       <button 
-        class="material-symbols-outlined w-8 h-8 p-0 btn btn-ghost"
+        class="material-symbols-outlined w-8 h-8 p-0 pl-2 btn btn-ghost"
         onclick={() => document.getElementById("skills_carousel").scrollBy({left: -1, top: 0})}
       >
         arrow_back_ios
