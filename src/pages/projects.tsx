@@ -1,15 +1,46 @@
+import { createSignal } from 'solid-js';
+
 export default function Projects() {
+  const [show_left_arrow, set_show_left_arrow] = createSignal(false);
+  const [show_right_arrow, set_show_right_arrow] = createSignal(true);
+
+  const update_scroll_state = (e) => {
+    const target = e.target;
+    const scroll_left = target.scrollLeft;
+    const max_scroll = target.scrollWidth - target.clientWidth;
+
+    set_show_left_arrow(scroll_left > 0);
+    set_show_right_arrow(scroll_left < max_scroll - 1);
+  }
+  
+  const scroll_left = () => {
+    const carousel = document.getElementById("projects_carousel");
+    const scrollAmount = carousel.offsetWidth;
+    carousel.scrollBy({left: -scrollAmount, top: 0, behavior: 'smooth'});
+  }
+
+  const scroll_right = () => {
+    const carousel = document.getElementById("projects_carousel");
+    const scrollAmount = carousel.offsetWidth;
+    carousel.scrollBy({left: scrollAmount, top: 0, behavior: 'smooth'});
+  }
+
   return (
     <div class="flex flex-col w-full justify-center items-center gap-4 p-4">
       <div class="text-2xl font-bold">Projects</div>
       <div class="flex justify-center items-center gap-2">
-        <button 
-          class="material-symbols-outlined w-8 h-8 p-0 pl-2 btn btn-ghost"
-          onclick={() => document.getElementById("projects_carousel").scrollBy({left: -1, top: 0})}
+        <button  
+          class={`material-symbols-outlined w-8 h-8 p-0 pl-2 btn btn-ghost ${show_left_arrow() ? "" : "invisible"}`}
+
+          onclick={scroll_left}
         >
           arrow_back_ios
         </button>
-        <div id="projects_carousel" class="carousel w-64 md:w-96 max-w-full">
+        <div 
+          id="projects_carousel" 
+          class="carousel w-64 md:w-96 max-w-full"
+          onscroll={update_scroll_state}
+        >
           <div class="carousel-item w-full">
             <div class="w-full p-2">
               <div class="card w-full bg-base-200">
@@ -61,8 +92,9 @@ export default function Projects() {
           </div>
         </div>
         <button 
-          class="material-symbols-outlined w-8 h-8 p-0 btn btn-ghost"
-          onclick={() => document.getElementById("projects_carousel").scrollBy({left: 1, top: 0})}
+          class={`material-symbols-outlined w-8 h-8 p-0 pl-2 btn btn-ghost ${show_right_arrow() ? "" : "invisible"}`}
+
+          onclick={scroll_right}
         >
           arrow_forward_ios
         </button>

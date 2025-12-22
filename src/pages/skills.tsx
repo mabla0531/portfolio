@@ -1,13 +1,43 @@
+import { createSignal } from 'solid-js';
+
 export default function Skills() {
+  const [show_left_arrow, set_show_left_arrow] = createSignal(false);
+  const [show_right_arrow, set_show_right_arrow] = createSignal(true);
+
+  const update_scroll_state = (e) => {
+    const target = e.target;
+    const scroll_left = target.scrollLeft;
+    const max_scroll = target.scrollWidth - target.clientWidth;
+
+    set_show_left_arrow(scroll_left > 0);
+    set_show_right_arrow(scroll_left < max_scroll - 1);
+  }
+
+  const scroll_left = () => {
+    const carousel = document.getElementById("skills_carousel");
+    const scroll_amount = carousel.offsetWidth;
+    carousel.scrollBy({left: -scroll_amount, top: 0, behavior: 'smooth'});
+  }
+
+  const scroll_right = () => {
+    const carousel = document.getElementById("skills_carousel");
+    const scroll_amount = carousel.offsetWidth;
+    carousel.scrollBy({left: scroll_amount, top: 0, behavior: 'smooth'});
+  }
+
   return (
     <div class="flex w-full h-full justify-center items-center gap-2 p-4">
       <button 
-        class="material-symbols-outlined w-8 h-8 p-0 pl-2 btn btn-ghost"
-        onclick={() => document.getElementById("skills_carousel").scrollBy({left: -1, top: 0})}
+        class={`material-symbols-outlined w-8 h-8 p-0 pl-2 btn btn-ghost ${show_left_arrow() ? "" : "invisible"}`}
+        onclick={scroll_left}
       >
         arrow_back_ios
       </button>
-      <div id="skills_carousel" class="carousel carousel-horizontal carousel-center w-72 max-w-full">
+      <div 
+        id="skills_carousel" 
+        class="carousel carousel-horizontal carousel-center w-72 max-w-full" 
+        onScroll={update_scroll_state}
+      >
         <div class="carousel-item w-full flex flex-col gap-4">
           <div class="text-2xl font-bold w-full text-center">Languages</div>
           <div class="w-full p-2">
@@ -140,8 +170,8 @@ export default function Skills() {
         </div>
       </div>
       <button
-        class="material-symbols-outlined w-8 h-8 p-0 btn btn-ghost"
-        onclick={() => document.getElementById("skills_carousel").scrollBy({left: 1, top: 0})}
+        class={`material-symbols-outlined w-8 h-8 p-0 btn btn-ghost ${show_right_arrow() ? "" : "invisible"}`}
+        onclick={scroll_right}
       >
         arrow_forward_ios
       </button>
