@@ -1,7 +1,7 @@
 export default function Projects() {
   return (
     <div class="flex flex-col w-full justify-center items-center gap-2 p-4">
-      <div class="text-xl">Projects</div>
+      <div class="text-2xl font-bold">Projects</div>
       <div class="flex justify-center items-center gap-2 p-4">
         <button 
           class="material-symbols-outlined w-8 h-8 p-0 btn btn-ghost"
@@ -9,7 +9,7 @@ export default function Projects() {
         >
           arrow_back_ios
         </button>
-        <div id="projects_carousel" class="carousel w-96 max-w-full">
+        <div id="projects_carousel" class="carousel w-64 md:w-96 max-w-full">
           <div class="carousel-item w-full">
             <div class="w-full p-2">
               <div class="card w-full bg-base-200">
@@ -50,7 +50,7 @@ export default function Projects() {
                 </figure>
                 <div class="card-body">
                   <div class="card-title">KnockTwice</div>
-                  A custom Shopify storefront for KnockTwice, focused on marketing unique items
+                  A custom Shopify storefront for KnockTwice, focused on marketing unique clothing items from pre-2010
                   <div class="card-actions justify-end">
                     <button class="btn btn-primary btn-soft">GitHub</button>
                   </div>

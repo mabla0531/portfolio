@@ -19,6 +19,7 @@ export default function App() {
         <div id="intro" class="carousel-item w-full h-full"><Intro/></div>
         <div id="skills" class="carousel-item w-full h-full"><Skills/></div>
         <div id="projects" class="carousel-item w-full h-full"><Projects/></div>
+        <div id="contact" class="carousel-item w-full h-full"><Contact/></div>
       </div>
     </>
   );
