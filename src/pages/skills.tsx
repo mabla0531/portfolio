@@ -35,11 +35,11 @@ export default function Skills() {
       </button>
       <div 
         id="skills_carousel" 
-        class="carousel carousel-horizontal carousel-center w-72 max-w-full" 
+        class="carousel carousel-horizontal carousel-center w-72 md:w-84 lg:2-96 max-w-full" 
         onScroll={update_scroll_state}
       >
         <div class="carousel-item w-full flex flex-col gap-4">
-          <div class="text-2xl font-bold w-full text-center">Languages</div>
+          <div class="text-xl md:text-2xl lg:text-3xl w-full text-center">Languages</div>
           <div class="w-full p-2">
             <div class="flex justify-between w-full">
               <div>Rust</div>
@@ -78,7 +78,7 @@ export default function Skills() {
           </div>
         </div>
         <div class="carousel-item w-full flex flex-col gap-4">
-          <div class="text-2xl font-bold w-full text-center">Systems Engineering</div>
+          <div class="text-xl md:text-2xl lg:text-3xl w-full text-center">Systems Engineering</div>
           <div class="w-full p-2">
             <div class="flex justify-between w-full">
               <div>Interop/FFI</div>
@@ -107,7 +107,7 @@ export default function Skills() {
           </div>
         </div>
         <div class="carousel-item w-full flex flex-col gap-4">
-          <div class="text-2xl font-bold w-full text-center">Frontend/Backend</div>
+          <div class="text-xl md:text-2xl lg:text-3xl w-full text-center">Frontend/Backend</div>
           <div class="w-full p-2">
             <div class="flex justify-between w-full">
               <div>React</div>
@@ -136,7 +136,7 @@ export default function Skills() {
           </div>
         </div>
         <div class="carousel-item w-full flex flex-col gap-4">
-          <div class="text-2xl font-bold w-full text-center">Miscellaneous</div>
+          <div class="text-xl md:text-2xl lg:text-3xl w-full text-center">Miscellaneous</div>
           <div class="w-full p-2">
             <div class="flex justify-between w-full">
               <div>Linux</div>

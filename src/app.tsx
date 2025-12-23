@@ -26,10 +26,6 @@ export default function App() {
     const clampedIndex = Math.max(0, Math.min(currentIndex, items.length - 1));
     
     setActiveTab(clampedIndex);
-    
-    if (items[clampedIndex]) {
-      history.replaceState(null, null, `#${items[clampedIndex]}`);
-    }
   };
   
   const scrollToItem = (index) => {
@@ -72,12 +68,12 @@ export default function App() {
 
 
   return (
-    <>
+    <div class="flex flex-col w-full h-full">
       <div role="tablist" class="sticky top-0 left-0 flex w-full gap-2 justify-center tabs shadow-md">
         <For each={tabs}>
           {(tab, index) => (
             <a 
-              class={`tab md:text-xl ${activeTab() === index() ? 'tab-active' : ''}`}
+              class={`tab text-sm md:text-lg lg:text-2xl font-light ${activeTab() === index() ? 'tab-active' : ''}`}
               onClick={() => scrollToItem(index())}
             >
               {tab}
@@ -86,7 +82,7 @@ export default function App() {
         </For>      
       </div>
       <div 
-        class="carousel carousel-vertical w-full h-[calc(100%-40px)]" 
+        class="grow carousel carousel-vertical w-full" 
         ref={carouselRef}
       >
         <div id="about" class="carousel-item w-full h-full"><Intro/></div>
@@ -94,6 +90,6 @@ export default function App() {
         <div id="projects" class="carousel-item w-full h-full"><Projects/></div>
         <div id="contact" class="carousel-item w-full h-full"><Contact/></div>
       </div>
-    </>
+    </div>
   );
 }

@@ -27,7 +27,7 @@ export default function Projects() {
 
   return (
     <div class="flex flex-col w-full justify-center items-center gap-4 p-4">
-      <div class="text-2xl font-bold">Projects</div>
+      <div class="text-xl md:text-2xl lg:text-3xl">Projects</div>
       <div class="flex justify-center items-center gap-2">
         <button  
           class={`material-symbols-outlined w-8 h-8 p-0 pl-2 btn btn-ghost ${show_left_arrow() ? "" : "invisible"}`}
@@ -38,7 +38,7 @@ export default function Projects() {
         </button>
         <div 
           id="projects_carousel" 
-          class="carousel w-64 md:w-96 max-w-full"
+          class="carousel w-64 md:w-96 lg:w-128 max-w-full"
           onscroll={update_scroll_state}
         >
           <div class="carousel-item w-full">
@@ -47,8 +47,8 @@ export default function Projects() {
                 <figure>
                   <img src="./curlplusplus.png"/>
                 </figure>
-                <div class="card-body">
-                  <div class="card-title">Curl++</div>
+                <div class="card-body text-sm md:text-md lg:text-lg">
+                  <div class="card-title md:text-lg lg:text-xl">Curl++</div>
                   A minimal, elegant, functional HTTP client with a terminal UI, written with Rust and Ratatui
                   <div class="card-actions justify-end">
                     <a href="https://github.com/mabla0531/curlplusplus" target="_blank"><button class="btn btn-primary btn-soft">GitHub</button></a>
@@ -63,8 +63,8 @@ export default function Projects() {
                 <figure>
                   <img src="./aster.png"/>
                 </figure>
-                <div class="card-body">
-                  <div class="card-title">Aster</div>
+                <div class="card-body text-sm md:text-md lg:text-lg">
+                  <div class="card-title md:text-lg lg:text-xl">Aster</div>
                   A scalable point-of-sale software stack for cash-only transactions with pricebook and user account support
                   <div class="card-actions justify-end">
                     <a href="https://github.com/mabla0531/aster" target="_blank"><button class="btn btn-primary btn-soft">GitHub</button></a>
@@ -79,8 +79,8 @@ export default function Projects() {
                 <figure>
                   <img src="./knocktwice.png"/>
                 </figure>
-                <div class="card-body">
-                  <div class="card-title">KnockTwice</div>
+                <div class="card-body text-sm md:text-md lg:text-lg">
+                  <div class="card-title md:text-lg lg:text-xl">KnockTwice</div>
                   A custom Shopify storefront for KnockTwice, focused on marketing unique clothing items from pre-2010
                   <div class="card-actions justify-between">
                     <a href="https://knocktwice.online" target="_blank"><button class="btn btn-secondary btn-soft">Site</button></a>
@@ -92,7 +92,7 @@ export default function Projects() {
           </div>
         </div>
         <button 
-          class={`material-symbols-outlined w-8 h-8 p-0 pl-2 btn btn-ghost ${show_right_arrow() ? "" : "invisible"}`}
+          class={`material-symbols-outlined w-8 h-8 p-0 btn btn-ghost ${show_right_arrow() ? "" : "invisible"}`}
 
           onclick={scroll_right}
         >
