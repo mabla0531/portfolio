@@ -1,4 +1,5 @@
 import { createSignal, onMount, onCleanup } from "solid-js";
+import { inject } from "@vercel/analytics";
 import "./app.css";
 import Intro from "./pages/intro.tsx";
 import Skills from "./pages/skills.tsx";
@@ -6,6 +7,8 @@ import Projects from "./pages/projects.tsx";
 import Contact from "./pages/contact.tsx";
 
 export default function App() {
+  inject();
+
   const [activeTab, setActiveTab] = createSignal(0);
   let carouselRef;
   let isScrolling = false;
