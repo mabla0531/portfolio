@@ -126,12 +126,12 @@ export default function Skills() {
             <div class="divider"/>
             <div class="flex justify-between w-full">
               <div>UI/UX</div>
-              <div class="my-auto badge badge-secondary badge-soft">enterprise</div>
+              <div class="my-auto badge badge-primary badge-soft">enterprise</div>
             </div>
             <div class="divider"/>
             <div class="flex justify-between w-full">
               <div>Dioxus (multiplatform)</div>
-              <div class="my-auto badge badge-secondary badge-soft">enterprise</div>
+              <div class="my-auto badge badge-primary badge-soft">enterprise</div>
             </div>
           </div>
         </div>

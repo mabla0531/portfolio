@@ -70,16 +70,14 @@ export default function App() {
   return (
     <div class="flex flex-col w-full h-full">
       <div role="tablist" class="sticky top-0 left-0 flex w-full gap-2 justify-center tabs shadow-md">
-        <For each={tabs}>
-          {(tab, index) => (
+          {tabs.map((tab, index) => (
             <a 
-              class={`tab text-sm md:text-lg lg:text-2xl font-light ${activeTab() === index() ? 'tab-active' : ''}`}
-              onClick={() => scrollToItem(index())}
+              class={`tab text-sm md:text-md lg:text-lg font-light ${activeTab() === index ? 'tab-active' : ''}`}
+              onClick={() => scrollToItem(index)}
             >
               {tab}
             </a>
-          )}
-        </For>      
+          ))}
       </div>
       <div 
         class="grow carousel carousel-vertical w-full" 
