@@ -52,12 +52,12 @@ export default function Skills() {
             </div>
             <div class="divider"/>
             <div class="flex justify-between w-full">
-              <div>C++</div>
-              <div class="my-auto badge badge-secondary badge-soft">intermediate</div>
+              <div>TypeScript</div>
+              <div class="my-auto badge badge-primary badge-soft">enterprise</div>
             </div>
             <div class="divider"/>
             <div class="flex justify-between w-full">
-              <div>TypeScript</div>
+              <div>C++</div>
               <div class="my-auto badge badge-secondary badge-soft">intermediate</div>
             </div>
             <div class="divider"/>
@@ -115,23 +115,28 @@ export default function Skills() {
             </div>
             <div class="divider"/>
             <div class="flex justify-between w-full">
-              <div>Svelte</div>
-              <div class="my-auto badge badge-primary badge-soft">enterprise</div>
-            </div>
-            <div class="divider"/>
-            <div class="flex justify-between w-full">
               <div>REST</div>
               <div class="my-auto badge badge-primary badge-soft">enterprise</div>
             </div>
             <div class="divider"/>
             <div class="flex justify-between w-full">
-              <div>UI/UX</div>
+              <div>UI/UX Design</div>
               <div class="my-auto badge badge-primary badge-soft">enterprise</div>
             </div>
             <div class="divider"/>
             <div class="flex justify-between w-full">
               <div>Dioxus (multiplatform)</div>
               <div class="my-auto badge badge-primary badge-soft">enterprise</div>
+            </div>
+            <div class="divider"/>
+            <div class="flex justify-between w-full">
+              <div>Svelte</div>
+              <div class="my-auto badge badge-secondary badge-soft">intermediate</div>
+            </div>
+            <div class="divider"/>
+            <div class="flex justify-between w-full">
+              <div>NodeJS</div>
+              <div class="my-auto badge badge-secondary badge-soft">intermediate</div>
             </div>
           </div>
         </div>
@@ -141,11 +146,6 @@ export default function Skills() {
             <div class="flex justify-between w-full">
               <div>Linux</div>
               <div class="my-auto badge badge-accent badge-soft">daily-drive</div>
-            </div>
-            <div class="divider"/>
-            <div class="flex justify-between w-full">
-              <div>NPM/Vite</div>
-              <div class="my-auto badge badge-primary badge-soft">enterprise</div>
             </div>
             <div class="divider"/>
             <div class="flex justify-between w-full">
