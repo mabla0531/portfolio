@@ -1,3 +1,10 @@
+<script lang="ts">
+	import x from '$lib/assets/x.svg';
+	import email from '$lib/assets/email.svg';
+	import github from '$lib/assets/github.svg';
+	import linkedin from '$lib/assets/linkedin.svg';
+</script>
+
 <div class="carousel h-dvh w-dvw carousel-vertical bg-base-100">
 	<div class="carousel-item flex h-full min-h-full w-full flex-col items-center justify-center">
 		<div>
@@ -73,18 +80,18 @@
 			<div class="flex justify-center text-xl">Let's get in touch!</div>
 			<div class="flex justify-center gap-2">
 				<button class="btn btn-circle border-none! btn-ghost p-1 hover:scale-110">
-					<img src="x.svg" class="h-8 w-8" />
+					<img src={x} class="h-8 w-8" />
 				</button>
 				<button class="btn btn-circle border-none! btn-ghost p-1 hover:scale-110">
-					<img src="linkedin.svg" class="h-8 w-8" />
+					<img src={linkedin} class="h-8 w-8" />
 				</button>
 				<button class="btn btn-circle border-none! btn-ghost p-1 hover:scale-110">
-					<img src="github.svg" class="h-8 w-8" />
+					<img src={github} class="h-8 w-8" />
 				</button>
 			</div>
 			<div class="flex justify-center">
 				<div class="flex items-center justify-center gap-1">
-					<img src="email.svg" class="h-5 w-5" />
+					<img src={email} class="h-5 w-5" />
 					<div>matthewbl531 [at] icloud [dot] com</div>
 				</div>
 			</div>
